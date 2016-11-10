@@ -109,9 +109,12 @@ public function before()
                 foreach ($poliklinika as $one) {
                     $list1[$one['medorg_id']] = $node1;
                     $list1[$one['medorg_id']]['medorg_name'] = $medorg[$one['medorg_id']];
-                    if(!empty(trim($one['suggestions']))) $suggestions[] = trim($one['suggestions']);
-                    if(!empty(trim($one['spectxt']))) $spectxt[] = trim($one['spectxt']);
-                    if(!empty(trim($one['detailtxt']))) $detailtxt[] = trim($one['detailtxt']);
+                    $one['suggestions'] = trim($one['suggestions']);
+                    if(!empty($one['suggestions'])) $suggestions[] = trim($one['suggestions']);
+                    $one['spectxt'] = trim($one['spectxt']);
+                    if(!empty($one['spectxt'])) $spectxt[] = trim($one['spectxt']);
+                    $one['detailtxt'] = trim($one['detailtxt']);
+                    if(!empty($one['detailtxt'])) $detailtxt[] = trim($one['detailtxt']);
                 }
                 foreach ($poliklinika as $one) {
                     if($one['gender']=='1') $list1[$one['medorg_id']]['gender1']++;
@@ -143,7 +146,8 @@ public function before()
                 foreach ($statsionar as $one) {
                     $list2[$one['medorg_id']] = $node2;
                     $list2[$one['medorg_id']]['medorg_name'] = $medorg[$one['medorg_id']];
-                    if(!empty(trim($one['problems']))) $problems[] = trim($one['problems']);
+                    $one['problems'] = trim($one['problems']);
+                    if(!empty($one['problems'])) $problems[] = trim($one['problems']);
                 }
                 foreach ($statsionar as $one) {
                     if($one['gender']=='1') $list2[$one['medorg_id']]['gender1']++;
