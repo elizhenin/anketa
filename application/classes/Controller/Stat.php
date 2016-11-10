@@ -21,14 +21,14 @@ public function before()
         $this->page = $page;
     }
 
+//    public function action_export()
+//    {
+//        $page = View::factory('stat/export/index');
+//
+//        $this->page = $page;
+//    }
+
     public function action_export()
-    {
-        $page = View::factory('stat/export/index');
-
-        $this->page = $page;
-    }
-
-    public function action_poliklinnika()
     {
         if ($this->request->method() == Request::GET) {
             $from = $this->request->post('from');
@@ -41,9 +41,10 @@ public function before()
              * to = strtotime(to)-1;
              *
              */
-            $records = Model_Anketa::GetPoliklinnika($from,$to);
+            $poliklinnika = Model_Anketa::GetPoliklinnika($from,$to);
+            $statsionar = Model_Anketa::GetPoliklinnika($from,$to);
         }
-        $page = View::factory('stat/export/poliklinnika');
+        $page = View::factory('report/index');
         $medorg = Model_Catalog::GetMedOrg(false);
         $new = array();
         foreach($medorg as $one){
@@ -55,25 +56,5 @@ public function before()
         $this->page = $page;
     }
 
-    public function action_statsionar()
-    {
-        if ($this->request->method() == Request::GET) {
-            $from = $this->request->post('from');
-            $to = $this->request->post('to');
-    $records = Model_Anketa::GetPoliklinnika($from,$to);
-
-
-        }
-        $page = View::factory('stat/export/statsionar');
-        $medorg = Model_Catalog::GetMedOrg(false);
-        $new = array();
-        foreach($medorg as $one){
-            $new[$one['id']]=$one['name'];
-        }
-        $medorg = $new;unset($new);
-        $page->medorg = $medorg;
-        if(!empty($records)) $page->records = $records;
-        $this->page = $page;
-    }
 
 }
