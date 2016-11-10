@@ -536,24 +536,60 @@
     <table:covered-table-cell/>
     <table:table-cell table:number-columns-repeated="16370" table:style-name="ce5"/>
 </table:table-row>
-<table:table-row table:style-name="ro4">
-    <table:table-cell office:value-type="string" table:style-name="ce1">
-        <text:p>поликлиника № (3)</text:p>
-    </table:table-cell>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:style-name="ce4"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:number-columns-repeated="2" table:style-name="ce4"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:style-name="ce4"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce1"/>
-    <table:table-cell table:number-columns-repeated="16370" table:style-name="ce5"/>
-</table:table-row>
+<?php
+if(!empty($list1))
+    foreach($list1 as $one){
+        ?>
+        <table:table-row table:style-name="ro8">
+            <table:table-cell office:value-type="string" table:style-name="ce7">
+                <text:p><?=$one['medorg_name']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce2">
+                <text:p><?=$one['gender1']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce3">
+                <text:p><?=$one['gender2']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce2">
+                <text:p><?=$one['age1']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce4">
+                <text:p><?=$one['age2']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce3">
+                <text:p><?=$one['age3']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce2">
+                <text:p><?=$one['difficulty1']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce4">
+                <text:p><?=$one['difficulty2']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce4">
+                <text:p><?=$one['difficulty3']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce3">
+                <text:p><?=$one['difficulty4']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce2">
+                <text:p><?=$one['satisfaction1']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce4">
+                <text:p><?=$one['satisfaction2']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce3">
+                <text:p><?=$one['satisfaction3']?></text:p>
+            </table:table-cell>
+            <table:table-cell table:style-name="ce7">
+                <text:p>X3 %</text:p>
+            </table:table-cell>
+            <table:table-cell table:number-columns-repeated="16370"/>
+
+        </table:table-row>
+    <?php
+    }
+?>
+
 <table:table-row table:style-name="ro1">
     <table:table-cell table:number-columns-repeated="16384" table:style-name="ce6"/>
 </table:table-row>
@@ -561,8 +597,8 @@
     <table:table-cell office:value-type="string" table:style-name="ce11">
         <text:p>вопрос 6-В:</text:p>
     </table:table-cell>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['spec1']))?$list1_counters['spec1']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['spec1']))?$list1_counters['spec1']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -574,8 +610,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['spec2']))?$list1_counters['spec2']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['spec2']))?$list1_counters['spec2']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -587,8 +623,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['spec3']))?$list1_counters['spec3']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['spec3']))?$list1_counters['spec3']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -600,8 +636,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['spec4']))?$list1_counters['spec4']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['spec4']))?$list1_counters['spec4']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -613,8 +649,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['spec5']))?$list1_counters['spec5']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['spec5']))?$list1_counters['spec5']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -631,8 +667,8 @@
     <table:table-cell office:value-type="string" table:style-name="ce11">
         <text:p>вопрос 7-В:</text:p>
     </table:table-cell>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['detail1']))?$list1_counters['detail1']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['detail1']))?$list1_counters['detail1']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -643,8 +679,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['detail2']))?$list1_counters['detail2']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['detail2']))?$list1_counters['detail2']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -655,8 +691,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['detail3']))?$list1_counters['detail3']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['detail3']))?$list1_counters['detail3']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -667,8 +703,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['detail4']))?$list1_counters['detail4']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['detail4']))?$list1_counters['detail4']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -679,8 +715,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['detail5']))?$list1_counters['detail5']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['detail5']))?$list1_counters['detail5']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -691,8 +727,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list1_counters['detail6']))?$list1_counters['detail6']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list1_counters['detail6']))?$list1_counters['detail6']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -703,19 +739,6 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:number-columns-repeated="16384"/>
-</table:table-row>
-<table:table-row table:style-name="ro5">
-    <table:table-cell office:value-type="string" table:style-name="ce15">
-        <text:p>вопрос 6-Б; 6,7,8-В:</text:p>
-    </table:table-cell>
-    <table:table-cell office:value-type="string" table:number-columns-spanned="7"
-                      table:number-rows-spanned="2" table:style-name="ce34">
-        <text:p>пожелания, предложения изложить в формате Word для каждой медицинской организации
-        </text:p>
-    </table:table-cell>
-    <table:covered-table-cell table:number-columns-repeated="6"/>
-    <table:table-cell table:number-columns-repeated="5" table:style-name="ce12"/>
-    <table:table-cell table:number-columns-repeated="16371"/>
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce13"/>
@@ -843,24 +866,59 @@
     <table:covered-table-cell/>
     <table:table-cell table:number-columns-repeated="16370"/>
 </table:table-row>
-<table:table-row table:style-name="ro8">
-    <table:table-cell office:value-type="string" table:style-name="ce7">
-        <text:p>станционар(3)</text:p>
-    </table:table-cell>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:style-name="ce4"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:number-columns-repeated="2" table:style-name="ce4"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce2"/>
-    <table:table-cell table:style-name="ce4"/>
-    <table:table-cell table:style-name="ce3"/>
-    <table:table-cell table:style-name="ce7"/>
-    <table:table-cell table:number-columns-repeated="16370"/>
-</table:table-row>
+<?php
+if(!empty($list2))
+foreach($list2 as $one){
+    ?>
+    <table:table-row table:style-name="ro8">
+        <table:table-cell office:value-type="string" table:style-name="ce7">
+            <text:p><?=$one['medorg_name']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce2">
+            <text:p><?=$one['gender1']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce3">
+        <text:p><?=$one['gender2']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce2">
+        <text:p><?=$one['age1']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce4">
+        <text:p><?=$one['age2']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce3">
+        <text:p><?=$one['age3']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce2">
+        <text:p><?=$one['time1']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce4">
+        <text:p><?=$one['time2']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce4">
+            <text:p><?=$one['time3']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce3">
+        <text:p><?=$one['time4']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce2">
+        <text:p><?=$one['satisfaction1']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce4">
+        <text:p><?=$one['satisfaction2']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce3">
+        <text:p><?=$one['satisfaction3']?></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="ce7">
+        <text:p>X3 %</text:p>
+        </table:table-cell>
+        <table:table-cell table:number-columns-repeated="16370"/>
+    </table:table-row>
+    <?php
+}
+?>
+
 <table:table-row table:style-name="ro1">
     <table:table-cell table:number-columns-repeated="16384" table:style-name="ce6"/>
 </table:table-row>
@@ -868,8 +926,8 @@
     <table:table-cell office:value-type="string" table:style-name="ce11">
         <text:p>вопрос 6-В:</text:p>
     </table:table-cell>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['conditions1']))?$list2_counters['conditions1']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['conditions1']))?$list2_counters['conditions1']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -881,8 +939,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['conditions2']))?$list2_counters['conditions2']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['conditions2']))?$list2_counters['conditions2']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -894,8 +952,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['conditions3']))?$list2_counters['conditions3']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['conditions3']))?$list2_counters['conditions3']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -907,8 +965,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['conditions4']))?$list2_counters['conditions4']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['conditions4']))?$list2_counters['conditions4']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce17">
@@ -925,8 +983,8 @@
     <table:table-cell office:value-type="string" table:style-name="ce11">
         <text:p>вопрос 7-В:</text:p>
     </table:table-cell>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['food1']))?$list2_counters['food1']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['food1']))?$list2_counters['food1']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -937,8 +995,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['food2']))?$list2_counters['food2']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['food2']))?$list2_counters['food2']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -949,8 +1007,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['food3']))?$list2_counters['food3']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['food3']))?$list2_counters['food3']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -961,8 +1019,8 @@
 </table:table-row>
 <table:table-row table:style-name="ro1">
     <table:table-cell table:style-name="ce6"/>
-    <table:table-cell office:value-type="float" office:value="0" table:style-name="ce11">
-        <text:p>0</text:p>
+    <table:table-cell office:value-type="float" office:value="<?=(!empty($list2_counters['food4']))?$list2_counters['food4']:''?>" table:style-name="ce11">
+        <text:p><?=(!empty($list2_counters['food4']))?$list2_counters['food4']:''?></text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:number-columns-spanned="6"
                       table:number-rows-spanned="1" table:style-name="ce26">
@@ -973,19 +1031,6 @@
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:number-columns-repeated="16384"/>
-</table:table-row>
-<table:table-row table:style-name="ro5">
-    <table:table-cell office:value-type="string" table:style-name="ce15">
-        <text:p>вопрос 6-Б; 8-В:</text:p>
-    </table:table-cell>
-    <table:table-cell office:value-type="string" table:number-columns-spanned="7"
-                      table:number-rows-spanned="2" table:style-name="ce34">
-        <text:p>пожелания, предложения изложить в формате Word для каждой медицинской организации
-        </text:p>
-    </table:table-cell>
-    <table:covered-table-cell table:number-columns-repeated="6"/>
-    <table:table-cell table:number-columns-repeated="5" table:style-name="ce12"/>
-    <table:table-cell table:number-columns-repeated="16371" table:style-name="ce6"/>
 </table:table-row>
 <table:table-row table:style-name="ro5">
     <table:table-cell table:style-name="ce13"/>

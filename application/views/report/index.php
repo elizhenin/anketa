@@ -19,6 +19,14 @@
     </form>
 </div>
 
+<?php
+if(!empty($download))
+{
+    ?>
+    <a href="/reports/<?=$download?>">Скачать отчет</a>
+<?php
+}
+?>
 
 <script type="text/javascript">
     $(function () {

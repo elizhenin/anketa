@@ -39,6 +39,7 @@ class Model_Anketa extends Model
         $data['time'] = $post['time'];
         $data['satisfaction'] = $post['satisfaction'];
         $data['conditions'] = $post['conditions'];
+        $data['food'] = $post['food'];
         $data['problems'] = htmlspecialchars(trim($post['problems']));
 	$data['date'] = time();
         DB::insert('statsionar',array_keys($data))
@@ -52,6 +53,20 @@ class Model_Anketa extends Model
             ->from('poliklinnika')
             ->where('date','>=',strtotime($dfrom.'  00:00:00'))
             ->where('date','<=',strtotime($dto.'  23:59:59'))
+               ->where('medorg_id','>',0)
+            ->execute()
+            ->as_array();
+        return $db;
+
+    }
+
+    static function GetStatsionar($dfrom, $dto)
+    {
+        $db = DB::select()
+            ->from('statsionar')
+            ->where('date','>=',strtotime($dfrom.'  00:00:00'))
+            ->where('date','<=',strtotime($dto.'  23:59:59'))
+            ->where('medorg_id','>',0)
             ->execute()
             ->as_array();
         return $db;
