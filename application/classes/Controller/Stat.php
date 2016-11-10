@@ -133,13 +133,15 @@ public function before()
                     if($one['spec2']==1)  $list1_counters['spec2']++;
                     if($one['spec3']==1)  $list1_counters['spec3']++;
                     if($one['spec4']==1)  $list1_counters['spec4']++;
-                    if(!empty(trim($one['spectxt'])))  $list1_counters['spec5']++;
+                    $one['spectxt'] = trim($one['spectxt']);
+                    if(!empty($one['spectxt']))  $list1_counters['spec5']++;
                     if($one['detail1']==1)  $list1_counters['detail1']++;
                     if($one['detail2']==1)  $list1_counters['detail2']++;
                     if($one['detail3']==1)  $list1_counters['detail3']++;
                     if($one['detail4']==1)  $list1_counters['detail4']++;
                     if($one['detail5']==1)  $list1_counters['detail5']++;
-                    if(!empty(trim($one['detailtxt']))) $list1_counters['detail6']++;
+                    $one['detailtxt'] = trim($one['detailtxt']);
+                    if(!empty($one['detailtxt'])) $list1_counters['detail6']++;
                 }
             }
             if(!empty($statsionar)) {
