@@ -40,11 +40,15 @@ public function before()
             $from = $this->request->query('from');
             $to = $this->request->query('to');
             $month = $this->request->query('month');
-           
-            $poliklinika = Model_Anketa::GetPoliklinnika($from,$to,$month);
-            $statsionar = Model_Anketa::GetStatsionar($from,$to,$month);
-            $filename = Model_Anketa::GenerateReports($poliklinika,$statsionar);
-
+            if (!empty($from) ||
+                !empty($to) ||
+                !empty($month)
+           ){
+            }
+            $poliklinika = Model_Anketa::GetPoliklinnika($from, $to, $month);
+            $statsionar = Model_Anketa::GetStatsionar($from, $to, $month);
+            $filename = Model_Anketa::GenerateReports($poliklinika, $statsionar);
+        }
         }
         $page = View::factory('report/index');
         if(!empty($filename))
