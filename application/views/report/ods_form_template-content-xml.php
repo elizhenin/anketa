@@ -447,8 +447,7 @@
                     table:default-cell-style-name="ce6"/>
 <table:table-row table:style-name="ro1">
     <table:table-cell office:value-type="string" table:style-name="ce6">
-        <text:p>Поликлиника
-            <text:s/>
+        <text:p>Поликлиника<text:s/>
         </text:p>
     </table:table-cell>
     <table:table-cell table:number-columns-repeated="16383" table:style-name="ce6"/>
@@ -487,29 +486,23 @@
 <table:table-row table:style-name="ro3">
     <table:covered-table-cell/>
     <table:table-cell office:value-type="string" table:style-name="ce8">
-        <text:p>А.<text:s text:c="12"/>м
-        </text:p>
+        <text:p>А.<text:s text:c="12"/>м</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce9">
-        <text:p>Б.<text:s text:c="14"/>ж
-        </text:p>
+        <text:p>Б.<text:s text:c="14"/>ж</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce8">
-        <text:p>А.<text:s text:c="11"/>до 25
-        </text:p>
+        <text:p>А.<text:s text:c="11"/>до 25</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce10">
-        <text:p>Б.<text:s text:c="9"/>26-60
-        </text:p>
+        <text:p>Б.<text:s text:c="9"/>26-60</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce9">
-        <text:p>В.<text:s text:c="13"/>61 и больше
-            <text:s/>
+        <text:p>В.<text:s text:c="13"/>61 и больше<text:s/>
         </text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce8">
-        <text:p>А.<text:s text:c="12"/>очень легко
-        </text:p>
+        <text:p>А.<text:s text:c="12"/>очень легко</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce10">
         <text:p>Б. легко</text:p>
@@ -518,20 +511,16 @@
         <text:p>В. сложно</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce9">
-        <text:p>Г.<text:s text:c="18"/>не удалось записаться
-        </text:p>
+        <text:p>Г.<text:s text:c="18"/>не удалось записаться</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce8">
-        <text:p>А.<text:s text:c="15"/>полностью удовлетворяет
-        </text:p>
+        <text:p>А.<text:s text:c="15"/>полностью удовлетворяет</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce10">
-        <text:p>Б.<text:s text:c="28"/>в основном удовлетворяет
-        </text:p>
+        <text:p>Б.<text:s text:c="28"/>в основном удовлетворяет</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce9">
-        <text:p>В.<text:s text:c="25"/>совсем не удовлетворяет
-        </text:p>
+        <text:p>В.<text:s text:c="25"/>совсем не удовлетворяет</text:p>
     </table:table-cell>
     <table:covered-table-cell/>
     <table:table-cell table:number-columns-repeated="16370" table:style-name="ce5"/>
@@ -581,7 +570,7 @@ if(!empty($list1))
                 <text:p><?=$one['satisfaction3']?></text:p>
             </table:table-cell>
             <table:table-cell table:style-name="ce7">
-                <text:p>X3 %</text:p>
+                <text:p></text:p>
             </table:table-cell>
             <table:table-cell table:number-columns-repeated="16370"/>
 
@@ -825,43 +814,35 @@ if(!empty($list1))
         <text:p>Б. ж</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce8">
-        <text:p>А.<text:s text:c="7"/>до 25
-        </text:p>
+        <text:p>А.<text:s text:c="7"/>до 25</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce10">
-        <text:p><text:s/>Б.<text:s text:c="9"/>26-60
-        </text:p>
+        <text:p><text:s/>Б.<text:s text:c="9"/>26-60</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce9">
-        <text:p>В.<text:s text:c="11"/>61 и больше
-            <text:s/>
+        <text:p>В.<text:s text:c="11"/>61 и больше<text:s/>
         </text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce8">
         <text:p>А. быстро</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce10">
-        <text:p>Б.<text:s text:c="11"/>немного подождал (а)
-        </text:p>
+        <text:p>Б.<text:s text:c="11"/>немного подождал (а)</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce10">
         <text:p>В. длительно</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce9">
-        <text:p>Г.<text:s text:c="15"/>пока не обратилась(ся) повторно
-        </text:p>
+        <text:p>Г.<text:s text:c="15"/>пока не обратилась(ся) повторно</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce8">
-        <text:p>А.<text:s text:c="10"/>полностью удовлетворяет
-        </text:p>
+        <text:p>А.<text:s text:c="10"/>полностью удовлетворяет</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce10">
-        <text:p>Б.<text:s text:c="24"/>в основном удовлетворяет
-        </text:p>
+        <text:p>Б.<text:s text:c="24"/>в основном удовлетворяет</text:p>
     </table:table-cell>
     <table:table-cell office:value-type="string" table:style-name="ce9">
-        <text:p>В.<text:s text:c="22"/>совсем не удовлетворяет
-        </text:p>
+        <text:p>В.<text:s text:c="22"/>совсем не удовлетворяет</text:p>
     </table:table-cell>
     <table:covered-table-cell/>
     <table:table-cell table:number-columns-repeated="16370"/>
