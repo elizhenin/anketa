@@ -283,12 +283,12 @@ class Model_Anketa extends Model
 //
         system('unoconv -i FilterOptions=59,34,utf-8,1 -f xls '.'reports/'.$filename.'/Report.ods');
         system('unoconv -i FilterOptions=59,34,utf-8,1 -f xls '.'reports/'.$filename.'/Texts.odt');
-        unlink('reports/'.$filename.'/Report.ods');
-        unlink('reports/'.$filename.'/Texts.odt');
+  //      unlink('reports/'.$filename.'/Report.ods');
+    //    unlink('reports/'.$filename.'/Texts.odt');
         self::Zip('reports/'.$filename,'reports/'.$filename.'.zip');
-        unlink('reports/'.$filename.'/Report.xls');
-        unlink('reports/'.$filename.'/Texts.doc');
-        rmdir('reports/'.$filename);
+      //  unlink('reports/'.$filename.'/Report.xls');
+     //   unlink('reports/'.$filename.'/Texts.doc');
+     //   rmdir('reports/'.$filename);
         return $filename.'.zip';
     }
 
