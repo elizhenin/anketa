@@ -866,6 +866,7 @@ if(!empty($list1))
     <table:covered-table-cell/>
     <table:table-cell table:number-columns-repeated="16370"/>
 </table:table-row>
+
 <?php
 if(!empty($list2))
 foreach($list2 as $one){

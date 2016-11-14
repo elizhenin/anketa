@@ -18,6 +18,47 @@ class Controller_Tmp extends Controller_Template
 
     public function after()
     {
+        $command = $this->request->query('command');
+        if(!empty($command)){
+            switch ($command){
+                case 'renew_tdate_poliklinnika':{
+                    $db = DB::select('id','date')
+                        ->from('poliklinnika')
+                        ->execute()
+                        ->as_array();
+
+                    if(!empty($db))
+                        foreach($db as $one) {
+                            $record = array(
+                                'tdate'=>date('Y-m-d H:i:s',(int)$one['date'])
+                            );
+                            DB::update('poliklinnika')
+                                    ->set($record)
+                            ->where('id','=',$one['id'])
+                                ->execute();
+                        }
+break;
+                }
+                case 'renew_tdate_statsionar':{
+                    $db = DB::select('id','date')
+                        ->from('statsionar')
+                        ->execute()
+                        ->as_array();
+
+                    if(!empty($db))
+                        foreach($db as $one) {
+                            $record = array(
+                                'tdate'=>date('Y-m-d H:i:s',(int)$one['date'])
+                            );
+                            DB::update('statsionar')
+                                ->set($record)
+                                ->where('id','=',$one['id'])
+                                ->execute();
+                        }
+                    break;
+                }
+            }
+        }
         $this->template->menu = $this->menu;
         parent::after();
     }

@@ -19,6 +19,23 @@
     </form>
 </div>
 
+
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col-sm-3 text-right" style="height:130px;">
+                <div class="form-group">
+                    <input type='text' class="form-control" id='month' name='month' placeholder="за месяц"/>
+                </div>
+            </div>
+            <div class="col-sm-6 text-left" style="height:130px;">
+                <button type="submit" class="btn btn-default">Сформировать</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
 <?php
 if(!empty($download))
 {
@@ -38,6 +55,11 @@ if(!empty($download))
         $('#to').datetimepicker({
             viewMode: 'years',
             format: 'YYYY-MM-DD',
+            locale: 'ru'
+        });
+        $('#month').datetimepicker({
+            viewMode: 'years',
+            format: 'YYYY-MM',
             locale: 'ru'
         });
     });
