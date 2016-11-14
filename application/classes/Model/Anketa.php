@@ -285,8 +285,8 @@ class Model_Anketa extends Model
 //        system('unoconv -i FilterOptions=59,34,utf-8,1 -f doc '.'reports/'.$filename.'/Texts.odt');
 
         self::Zip('reports/'.$filename,'reports/'.$filename.'.zip');
-        unlink('reports/'.$filename.'/Report.xls');
-        unlink('reports/'.$filename.'/Texts.doc');
+//        unlink('reports/'.$filename.'/Report.xls');
+//        unlink('reports/'.$filename.'/Texts.doc');
         unlink('reports/'.$filename.'/Report.ods');
         unlink('reports/'.$filename.'/Texts.odt');
         rmdir('reports/'.$filename);
