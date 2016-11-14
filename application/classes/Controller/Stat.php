@@ -44,7 +44,6 @@ public function before()
                 !empty($to) ||
                 !empty($month)
            ){
-            }
             $poliklinika = Model_Anketa::GetPoliklinnika($from, $to, $month);
             $statsionar = Model_Anketa::GetStatsionar($from, $to, $month);
             $filename = Model_Anketa::GenerateReports($poliklinika, $statsionar);
