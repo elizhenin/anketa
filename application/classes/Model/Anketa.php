@@ -244,7 +244,7 @@ class Model_Anketa extends Model
                 if(!empty($one['detailtxt'])) $list1_counters['detail6']++;
             }
             foreach($list1 as $key=>$value){
-                $list1[$key]['percent'] = (($value['satisfaction1']+$value['satisfaction2'])/($value['gender1']+$value['gender2']))*100;
+                $list1[$key]['percent'] = round((($value['satisfaction1']+$value['satisfaction2'])/($value['gender1']+$value['gender2']))*100);
             }
         }
         if(!empty($statsionar)) {
@@ -277,7 +277,7 @@ class Model_Anketa extends Model
                 if($one['food4']==1)  $list2_counters['food4']++;
             }
             foreach($list2 as $key=>$value){
-                $list2[$key]['percent'] = (($value['satisfaction1']+$value['satisfaction2'])/($value['gender1']+$value['gender2']))*100;
+                $list2[$key]['percent'] = round((($value['satisfaction1']+$value['satisfaction2'])/($value['gender1']+$value['gender2']))*100);
             }
         }
 //
