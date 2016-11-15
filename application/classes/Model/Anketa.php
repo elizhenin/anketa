@@ -197,11 +197,24 @@ class Model_Anketa extends Model
                 $list1[$one['medorg_id']] = $node1;
                 $list1[$one['medorg_id']]['medorg_name'] = $medorg[$one['medorg_id']];
                 $one['suggestions'] = trim($one['suggestions']);
-                if(!empty($one['suggestions'])) $suggestions[] = trim($one['suggestions']);
+                if(!empty($one['suggestions'])) {
+                    $suggestions[] =
+                        array('text'=>$one['suggestions'],
+                                            'medorg'=>$medorg[$one['medorg_id']]
+                    );
+                }
                 $one['spectxt'] = trim($one['spectxt']);
-                if(!empty($one['spectxt'])) $spectxt[] = trim($one['spectxt']);
+                if(!empty($one['spectxt'])) {
+                    $spectxt[] =   array('text'=>$one['spectxt'],
+                        'medorg'=>$medorg[$one['medorg_id']]
+                    );
+                }
                 $one['detailtxt'] = trim($one['detailtxt']);
-                if(!empty($one['detailtxt'])) $detailtxt[] = trim($one['detailtxt']);
+                if(!empty($one['detailtxt'])) {
+                    $detailtxt[] =   array('text'=>$one['detailtxt'],
+                        'medorg'=>$medorg[$one['medorg_id']]
+                    );
+                }
             }
             foreach ($poliklinika as $one) {
                 if($one['gender']=='1') $list1[$one['medorg_id']]['gender1']++;

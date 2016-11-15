@@ -893,14 +893,13 @@ foreach($list2 as $one){
         <text:p><?=$one['satisfaction3']?></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="ce7">
-        <text:p><?=$one['satisfaction3']?></text:p>
+            <text:p><?=$one['percent']?></text:p>
         </table:table-cell>
-        <table:table-cell table:number-columns-repeated="16370"/>
+        <table:table-cell table:number-columns-repeated="16370">
     </table:table-row>
     <?php
 }
 ?>
-
 <table:table-row table:style-name="ro1">
     <table:table-cell table:number-columns-repeated="16384" table:style-name="ce6"/>
 </table:table-row>
