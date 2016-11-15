@@ -434,8 +434,7 @@
 <table:table-column table:style-name="co3" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co4" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co5" table:default-cell-style-name="ce6"/>
-<table:table-column table:style-name="co6" table:number-columns-repeated="2"
-                    table:default-cell-style-name="ce6"/>
+<table:table-column table:style-name="co6" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co7" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co8" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co9" table:default-cell-style-name="ce6"/>
@@ -443,6 +442,7 @@
 <table:table-column table:style-name="co11" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co12" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co13" table:default-cell-style-name="ce6"/>
+<table:table-column table:style-name="co14" table:default-cell-style-name="ce6"/>
 <table:table-column table:style-name="co6" table:number-columns-repeated="16370"
                     table:default-cell-style-name="ce6"/>
 <table:table-row table:style-name="ro1">
