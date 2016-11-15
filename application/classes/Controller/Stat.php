@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Stat extends Controller_Tmp
+class Controller_Stat extends Controller_Tmpstat
 {
 
 public function before()

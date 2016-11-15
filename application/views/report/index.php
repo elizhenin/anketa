@@ -1,4 +1,15 @@
 <div class="container">
+        <div class="row">
+            <div class="col-sm-3 text-right" style="height:130px;">
+            </div>
+            <div class="col-sm-6 text-left" style="height:130px;">
+<h2>Выберите диапазон</h2>
+            </div>
+            <div class="col-sm-3 text-right" style="height:130px;">
+            </div>
+        </div>
+</div>
+<div class="container">
     <form>
     <div class="row">
     <div class="col-sm-3 text-right" style="height:130px;">
@@ -19,7 +30,16 @@
     </form>
 </div>
 
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 text-right" style="height:130px;">
+        </div>
+        <div class="col-sm-6 text-left" style="height:130px;">
+            <h2>или конкретный месяц</h2>
+        </div>
+        <div class="col-sm-3 text-right" style="height:130px;">
+        </div>
+    </div>
 <div class="container">
     <form>
         <div class="row">
@@ -40,7 +60,7 @@
 if(!empty($download))
 {
     ?>
-    <a href="/reports/<?=$download?>">Скачать отчет</a>
+    <a href="/reports/<?=$download?>"><button class="btn btn-default">Скачать отчет</button></a>
 <?php
 }
 ?>
