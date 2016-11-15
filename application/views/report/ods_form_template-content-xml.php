@@ -570,7 +570,7 @@ if(!empty($list1))
                 <text:p><?=$one['satisfaction3']?></text:p>
             </table:table-cell>
             <table:table-cell table:style-name="ce7">
-                <text:p></text:p>
+                <text:p><?=$one['percent']?></text:p>
             </table:table-cell>
             <table:table-cell table:number-columns-repeated="16370"/>
 
@@ -893,7 +893,7 @@ foreach($list2 as $one){
         <text:p><?=$one['satisfaction3']?></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="ce7">
-        <text:p>X3 %</text:p>
+        <text:p><?=$one['satisfaction3']?></text:p>
         </table:table-cell>
         <table:table-cell table:number-columns-repeated="16370"/>
     </table:table-row>

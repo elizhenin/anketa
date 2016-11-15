@@ -149,7 +149,8 @@ class Model_Anketa extends Model
             'difficulty4'=>0,
             'satisfaction1'=>0,
             'satisfaction2'=>0,
-            'satisfaction3'=>0
+            'satisfaction3'=>0,
+            'percent'=>0
         );
         $node2 = array(
             'medorg_name'=>'',
@@ -164,7 +165,8 @@ class Model_Anketa extends Model
             'difficulty4'=>0,
             'satisfaction1'=>0,
             'satisfaction2'=>0,
-            'satisfaction3'=>0
+            'satisfaction3'=>0,
+            'percent'=>0
         );
         $list1_counters = array(
             'spec1'=>0,
@@ -228,6 +230,9 @@ class Model_Anketa extends Model
                 $one['detailtxt'] = trim($one['detailtxt']);
                 if(!empty($one['detailtxt'])) $list1_counters['detail6']++;
             }
+            foreach($list1 as $key=>$value){
+                $list1[$key]['percent'] = (($value['satisfaction1']+$value['satisfaction2'])/($value['gender1']+$value['gender2']))*100;
+            }
         }
         if(!empty($statsionar)) {
             foreach ($statsionar as $one) {
@@ -258,6 +263,9 @@ class Model_Anketa extends Model
                 if($one['food3']==1)  $list2_counters['food3']++;
                 if($one['food4']==1)  $list2_counters['food4']++;
             }
+            foreach($list2 as $key=>$value){
+                $list2[$key]['percent'] = (($value['satisfaction1']+$value['satisfaction2'])/($value['gender1']+$value['gender2']))*100;
+            }
         }
 //
         $filename = 'report-'.time();
@@ -282,6 +290,7 @@ class Model_Anketa extends Model
         self::Zip('odt_document_template/','reports/'.$filename.'/Texts.odt');
 //
 //        system('unoconv -i FilterOptions=59,34,utf-8,1 -f xls '.'reports/'.$filename.'/Report.ods');
+//        soffice  --headless --convert-to pdf filename.doc
 //        system('unoconv -i FilterOptions=59,34,utf-8,1 -f doc '.'reports/'.$filename.'/Texts.odt');
 
         self::Zip('reports/'.$filename,'reports/'.$filename.'.zip');
