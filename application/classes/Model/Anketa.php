@@ -106,6 +106,7 @@ class Model_Anketa extends Model
         if(!empty($dmonth))
             $db->where('tdate','like',$dmonth.'%');
            $db = $db->where('medorg_id','>',0)
+               ->order_by('medorg_id')
             ->execute()
             ->as_array();
         return $db;
@@ -123,6 +124,7 @@ class Model_Anketa extends Model
         if(!empty($dmonth))
             $db->where('tdate','like',$dmonth.'%');
           $db = $db->where('medorg_id','>',0)
+              ->order_by('medorg_id')
             ->execute()
             ->as_array();
         return $db;
