@@ -47,7 +47,7 @@ class Controller_Anketa extends Controller_Tmp
     {
         if ($this->request->method() == Request::POST) {
             $post = $this->request->post();
-
+            Model_Anketa::AddStatsionar($post);
         $this->redirect('/anketa/finished');
         }
         $page = View::factory('anketa/statsionar');
