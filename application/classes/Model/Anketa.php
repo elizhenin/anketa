@@ -168,14 +168,7 @@ class Model_Anketa extends Model
             'satisfaction1'=>0,
             'satisfaction2'=>0,
             'satisfaction3'=>0,
-            'conditions1'=>0,
-            'conditions2'=>0,
-            'conditions3'=>0,
-            'conditions4'=>0,
-            'food1'=>0,
-            'food2'=>0,
-            'food3'=>0,
-            'food4'=>0,
+
             'percent'=>0
         );
         $list1_counters = array(
@@ -277,14 +270,14 @@ class Model_Anketa extends Model
                 if($one['satisfaction']=='1') $list2[$one['medorg_id']]['satisfaction1']++;
                 if($one['satisfaction']=='2') $list2[$one['medorg_id']]['satisfaction2']++;
                 if($one['satisfaction']=='3') $list2[$one['medorg_id']]['satisfaction3']++;
-                if($one['conditions1']==1)  $list2_counters['conditions1']++;
-                if($one['conditions2']==1)  $list2_counters['conditions2']++;
-                if($one['conditions3']==1)  $list2_counters['conditions3']++;
-                if($one['conditions4']==1)  $list2_counters['conditions4']++;
-                if($one['food1']==1)  $list2_counters['food1']++;
-                if($one['food2']==1)  $list2_counters['food2']++;
-                if($one['food3']==1)  $list2_counters['food3']++;
-                if($one['food4']==1)  $list2_counters['food4']++;
+                if($one['conditions']==1)  $list2_counters['conditions1']++;
+                if($one['conditions']==2)  $list2_counters['conditions2']++;
+                if($one['conditions']==3)  $list2_counters['conditions3']++;
+                if($one['conditions']==4)  $list2_counters['conditions4']++;
+                if($one['food']==1)  $list2_counters['food1']++;
+                if($one['food']==2)  $list2_counters['food2']++;
+                if($one['food']==3)  $list2_counters['food3']++;
+                if($one['food']==4)  $list2_counters['food4']++;
             }
             foreach($list2 as $key=>$value){
                 $list2[$key]['percent'] = round((($value['satisfaction1']+$value['satisfaction2'])/($value['gender1']+$value['gender2']))*100);
