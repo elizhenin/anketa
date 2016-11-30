@@ -895,7 +895,7 @@ foreach($list2 as $one){
         <table:table-cell table:style-name="ce7">
             <text:p><?=$one['percent']?></text:p>
         </table:table-cell>
-        <table:table-cell table:number-columns-repeated="16370">
+        <table:table-cell table:number-columns-repeated="16370"/>
     </table:table-row>
     <?php
 }
