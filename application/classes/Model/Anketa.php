@@ -255,7 +255,11 @@ class Model_Anketa extends Model
                 $list2[$one['medorg_id']] = $node2;
                 $list2[$one['medorg_id']]['medorg_name'] = $medorg[$one['medorg_id']];
                 $one['problems'] = trim($one['problems']);
-                if(!empty($one['problems'])) $problems[] = trim($one['problems']);
+                if(!empty($one['problems']))
+                    $problems[] =
+                        array('text'=>$one['problems'],
+                            'medorg'=>$medorg[$one['medorg_id']]
+                        );
             }
             foreach ($statsionar as $one) {
                 if($one['gender']=='1') $list2[$one['medorg_id']]['gender1']++;
