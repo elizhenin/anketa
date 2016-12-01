@@ -301,10 +301,25 @@ class Model_Anketa extends Model
         self::Zip('ods_form_template/','reports/'.$filename.'/Report.ods');
 //
         $odt_content = View::factory('report/odt_document_template-content-xml');
-        $odt_content->suggestions = $suggestions;
-        $odt_content->spectxt = $spectxt;
-        $odt_content->detailtxt = $detailtxt;
-        $odt_content->problems = $problems;
+        $odt_fields['suggestions'] = array();
+        foreach($suggestions as $one){
+            $odt_fields['suggestions'][$one['medorg']][] = $one['text'];
+        }
+        $odt_fields['spectxt'] = array();
+        foreach($spectxt as $one){
+            $odt_fields['spectxt'][$one['medorg']][] = $one['text'];
+        }
+        $odt_fields['detailtxt'] = array();
+        foreach($detailtxt as $one){
+            $odt_fields['detailtxt'][$one['medorg']][] = $one['text'];
+        }
+        $odt_fields['problems'] = array();
+        foreach($problems as $one){
+            $odt_fields['problems'][$one['medorg']][] = $one['text'];
+        }
+
+        $odt_content->fields = $odt_fields;
+
         $odt_content = $odt_content->render();
         file_put_contents('odt_document_template/content.xml',$odt_content);
         self::Zip('odt_document_template/','reports/'.$filename.'/Texts.odt');
