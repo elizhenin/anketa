@@ -3,30 +3,10 @@
 class Controller_Stat extends Controller_Tmpstat
 {
 
-public function before()
-{
-    $this->menu = View::factory('stat/export/menu');
-    parent::before();
-}
-
     public function action_index()
     {
         $this->redirect('/stat/export');
     }
-
-   public function action_journal()
-    {
-        $page = View::factory('stat/journal/index');
-        $page->toolbar_cfg = View::factory('stat/toolbar');
-        $this->page = $page;
-    }
-
-//    public function action_export()
-//    {
-//        $page = View::factory('stat/export/index');
-//
-//        $this->page = $page;
-//    }
 
     public function action_export()
     {
@@ -49,7 +29,8 @@ public function before()
             $filename = Model_Anketa::GenerateReports($poliklinika, $statsionar);
         }
         }
-        $page = View::factory('report/index');
+        $page = View::factory('stat/index');
+        $page->toolbar_cfg = View::factory('stat/toolbar');
         if(!empty($filename))
         $page->download =$filename;
         $page->medorg = $medorg;

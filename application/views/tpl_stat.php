@@ -16,15 +16,16 @@
     <link rel="stylesheet" type="text/css" href="/css/snippets.css"/>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-datetimepicker.min.css"/>
 
+    <link rel="stylesheet" type="text/css" href="/css/w2ui-1.4.3.css"/>
+    <script type="text/javascript" src="/js/w2ui-1.4.3.js"></script>
+    <script type="text/javascript" src="/js/filesaver.js"></script>
+
+
 </head>
 <body style="padding: 0px; margin:0px">
 <div class="clearfix">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
     <?=$page?>
     </div>
-
-    <div class="col-md-2"></div>
 </div>
 
 </body>

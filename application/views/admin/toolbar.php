@@ -5,12 +5,6 @@
         items: [
             {type: 'button', id: 'users', caption: 'Пользователи', img: 'icon-folder'},
             {type: 'button', id: 'med_org_dic', caption: 'Мед.организации', img: 'icon-folder'},
-//            {type: 'button', id: 'journal_users', caption: 'Журнал входа', img: 'icon-folder'},
- //                   {type: 'html', id: 'recovery',
-  //                    html:'<form method="post" enctype="multipart/form-data">'+
-    //                  '<label>Загрузить prg0 CSV:'+
-      //            '<input name="prg0" type="file" accept=".csv" onchange="this.form.submit()"/>'+
-        //              '</label></form>'},
             {type: 'spacer'},
             {type: 'break', id: 'break_before_name'},
             {type: 'button', id: 'user_name', caption: '<?=$user['login']?>', hint: 'Сменить пароль'},
@@ -32,7 +26,7 @@
                 var xhttp = new XMLHttpRequest();
                 xhttp.open("POST", "/users/logout", false);
                 xhttp.send();
-                location.href = '/';
+                location.href = '/admin';
             }
 
         }

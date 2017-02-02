@@ -3,11 +3,7 @@
     {
         name: 'toolbar',
         items: [
-            {type: 'button', id: 'journal', caption: 'Журнал исполненных', img: 'icon-page'},
-            {type: 'button', id: 'medorgcount', caption: 'Статистика по организациям', img: 'icon-page'},
-            {type: 'button', id: 'upload', caption: 'Импорт XML', img: 'icon-page'},
-            {type: 'button', id: 'medorg', caption: 'Мед.организации', img: 'icon-page'},
-            {type: 'button', id: 'outgoing', caption: 'Направленные', img: 'icon-page'},
+            {type: 'button', id: 'export', caption: 'Выгрузка отчетов', img: 'icon-folder'},
             {type: 'spacer'},
             {type: 'break', id: 'break_before_name'},
             {type: 'button', id: 'user_name', caption: '<?=$user['login']?>', hint: 'Сменить пароль'},
@@ -16,30 +12,20 @@
         ],
         onClick: function (event) {
             console.log('Target: ' + event.target, event);
-            if (event.target == 'upload') {
-                location.href = '/stat/upload';
+            if (event.target == 'med_org_dic') {
+                location.href = '/admin/medorgedit';
             }
-            if (event.target == 'medorgcount') {
-                location.href = '/stat/medorgcount';
-            }
-            if (event.target == 'journal') {
-                location.href = '/stat/journal';
-            }
-            if (event.target == 'medorg') {
-                location.href = '/stat/medorg';
-            }
-            if (event.target == 'outgoing') {
-                location.href = '/stat/outgoing';
+            if (event.target == 'export') {
+                location.href = '/stat/export';
             }
             if (event.target == 'user_name') {
                 openPopup();
             }
-
             if (event.target == 'logout') {
                 var xhttp = new XMLHttpRequest();
                 xhttp.open("POST", "/users/logout", false);
                 xhttp.send();
-                location.href = '/';
+                location.href = '/stat';
             }
 
         }
