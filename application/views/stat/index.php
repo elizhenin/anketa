@@ -11,7 +11,7 @@
             margin: 10,
             panels: [
                 {type: 'top', size: '34', resizable: false},
-                {type: 'main', size: '100%', minSize: '100'}
+                {type: 'main', size: '100%', minSize: '100',css:'background-color:white'}
             ]
         }
     };
@@ -20,6 +20,7 @@
 </script>
 
 <div id="main-body" style="display: none">
+    <div class="clearfix">
 <div class="container">
     <div class="row">
         <div class="col-sm-3 text-right" style="height:130px;">
@@ -88,6 +89,7 @@
 
 
 </div>
+        </div>
     <script type="text/javascript">
         $(function () {
             $('#from').datetimepicker({
@@ -107,6 +109,7 @@
             });
         });
     </script>
+
 </div>
 
 <script>

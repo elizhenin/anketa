@@ -23,10 +23,13 @@
 
 </head>
 <body style="padding: 0px; margin:0px">
-<div class="clearfix">
-    <?=$page?>
-    </div>
-</div>
+<script type="text/javascript">
+    w2utils.locale('/js/ru-ru.json');
+
+</script>
+
+<?= $page ?>
+
 
 </body>
 </html>
